@@ -16,6 +16,7 @@ fn main() {
         .with_style(
             ProgressStyle::default_bar()
                 .template(OVERALL_TEMPLATE)
+                .unwrap()
                 .progress_chars(PROGRESS_CHARS),
         )
         .with_prefix("Overall")
@@ -26,6 +27,7 @@ fn main() {
             .with_style(
                 ProgressStyle::default_bar()
                     .template(FILE_TEMPLATE)
+                    .unwrap()
                     .progress_chars(PROGRESS_CHARS),
             )
             .with_prefix("File")
